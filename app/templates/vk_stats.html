@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VK Stats</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+<div class="container my-5">
+    <div class="card shadow p-4">
+        <a href="{{ url_for('smm.dashboard') }}" class="btn btn-outline-info mb-5">Home</a>
+        <h2 class="mb-4 text-center">📊 VK Stats</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped text-center">
+                <thead class="table-light">
+                    <tr>
+                        <th>Views</th>
+                        <th>Followers</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{ stats['views'] }}</td>
+                        <td>{{ stats['followers'] }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
